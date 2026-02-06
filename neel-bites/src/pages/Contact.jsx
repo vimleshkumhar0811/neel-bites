@@ -90,7 +90,7 @@ const Contact = () => {
                 <span className="text-3xl text-emerald-600">📍</span>
                 <div>
                   <p className="font-semibold text-gray-900">Our Office</p>
-                  <p>Ahmedabad, Gujarat, India</p>
+                  <p>Kalnu iela 5, Salaspils, Salaspils novads, Latvia</p>
                 </div>
               </li>
 
@@ -104,22 +104,8 @@ const Contact = () => {
                 </a>
               </li>
 
-              <li className="flex items-center gap-4">
-                <span className="text-3xl text-emerald-600">📞</span>
-                <a
-                  href="tel:+911234567890"
-                  className="text-emerald-700 hover:text-emerald-800 font-medium transition-colors"
-                >
-                  +91 1234 567 890
-                </a>
-              </li>
             </ul>
 
-            <div className="mt-10 pt-8 border-t border-gray-200">
-              <p className="text-gray-600 text-sm">
-                We're available Monday to Saturday, 10:00 AM – 7:00 PM IST
-              </p>
-            </div>
           </motion.div>
 
           {/* Form */}
