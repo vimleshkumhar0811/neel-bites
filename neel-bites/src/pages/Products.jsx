@@ -5,46 +5,86 @@ import { motion } from 'framer-motion';
 const Products = () => {
   const products = [
     {
-      id: 'butter-chicken',
-      icon: '🍛',
-      type: 'Instant Packet',
-      title: 'Butter Chicken Mix',
-      description: 'Rich, creamy Punjabi classic — restaurant taste ready in minutes.',
+      id: 'khaman-dhokla',
+      icon: '🟡',
+      type: 'Instant Mix',
+      title: 'Khaman Dhokla Mix',
+      description: 'Fluffy, tangy, spongy Gujarati steamed cake – restaurant-style in minutes.',
       price: '₹149',
-      bgGradient: 'from-amber-50 to-red-50',
+      bgGradient: 'from-yellow-50 to-amber-50',
       accentColor: 'emerald',
     },
     {
-      id: 'idli-sambar',
-      icon: '🥘',
-      type: 'Breakfast Kit',
-      title: 'Idli Sambar Mix',
-      description: 'Soft idlis with tangy, flavorful sambar — South Indian favorite.',
-      price: '₹129',
+      id: 'handvo',
+      icon: '🥮',
+      type: 'Instant Mix',
+      title: 'Handvo Mix',
+      description: 'Savory lentil & veggie cake with crunchy sesame topping – bake or steam.',
+      price: '₹169',
       bgGradient: 'from-green-50 to-emerald-50',
       accentColor: 'emerald',
     },
     {
-      id: 'pav-bhaji',
-      icon: '🌮',
-      type: 'Street Food',
-      title: 'Pav Bhaji Packet',
-      description: 'Mumbai-style spicy bhaji — quick, buttery & full of street flavor.',
-      price: '₹139',
-      bgGradient: 'from-red-50 to-rose-50',
-      accentColor: 'rose',
+      id: 'methi-gota',
+      icon: '🌿',
+      type: 'Instant Mix',
+      title: 'Methi Gota Mix',
+      description: 'Crispy fenugreek fritters – spicy, aromatic Gujarati street favorite.',
+      price: '₹129',
+      bgGradient: 'from-orange-50 to-amber-50',
+      accentColor: 'amber',
     },
     {
-      id: 'gulab-jamun',
-      icon: '🍮',
-      type: 'Dessert Mix',
-      title: 'Gulab Jamun Instant',
-      description: 'Soft, syrupy gulab jamuns — perfect traditional sweet treat.',
-      price: '₹169',
-      bgGradient: 'from-pink-50 to-rose-50',
-      accentColor: 'pink',
+      id: 'masala-khichdi',
+      icon: '🍲',
+      type: 'Instant Mix',
+      title: 'Gujarati Masala Khichdi',
+      description: 'Comforting one-pot rice & moong dal – light, nutritious & quick.',
+      price: '₹159',
+      bgGradient: 'from-teal-50 to-emerald-50',
+      accentColor: 'emerald',
     },
-    // You can add more products here...
+    {
+      id: 'thepla-mix',
+      icon: '🫓',
+      type: 'Instant Mix',
+      title: 'Methi Thepla Mix',
+      description: 'Healthy fenugreek flatbreads – soft, nutritious, no rolling hassle.',
+      price: '₹139',
+      bgGradient: 'from-lime-50 to-green-50',
+      accentColor: 'green',
+    },
+    {
+      id: 'khakhra',
+      icon: '🥨',
+      type: 'Ready Snack',
+      title: 'Masala Khakhra',
+      description: 'Thin, crispy whole-wheat Gujarati crackers – perfect with tea.',
+      price: '₹99',
+      bgGradient: 'from-amber-50 to-yellow-50',
+      accentColor: 'amber',
+    },
+    {
+      id: 'fafda',
+      icon: '🥨',
+      type: 'Ready Snack',
+      title: 'Fafda Strips',
+      description: 'Golden, crunchy gram-flour snack – classic companion to jalebi or chutney.',
+      price: '₹119',
+      bgGradient: 'from-yellow-50 to-orange-50',
+      accentColor: 'amber',
+    },
+    {
+      id: 'ratlam-sev',
+      icon: '🔶',
+      type: 'Ready Snack',
+      title: 'Ratlam Nylon Sev',
+      description: 'Fine, spicy gram-flour threads – ideal for chaat & snacking.',
+      price: '₹89',
+      bgGradient: 'from-rose-50 to-red-50',
+      accentColor: 'rose',
+    },
+    // Feel free to add more (e.g. Dalwada mix, Khandvi mix, Undhiyu mix if seasonal)
   ];
 
   return (
@@ -60,7 +100,7 @@ const Products = () => {
             transition={{ duration: 0.9 }}
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-5"
           >
-            Our Instant Products
+            Pure Gujarati Instant Products
           </motion.h1>
 
           <motion.p
@@ -69,7 +109,7 @@ const Products = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            Authentic Indian flavors packed for convenience — ready in minutes, anywhere in the world.
+            100% pure vegetarian Gujarati flavors — instant mixes & ready snacks. Authentic taste of Ahmedabad & Gujarat, ready in minutes.
           </motion.p>
         </div>
       </section>
@@ -104,6 +144,10 @@ const Products = () => {
                 <p className="text-gray-600 text-base mb-6 flex-grow">
                   {product.description}
                 </p>
+
+                <div className="text-xs text-gray-500 italic mt-auto pt-3 border-t border-gray-200/50">
+                  Pure Veg • No Preservatives • Gujarati Authentic
+                </div>
               </div>
             </motion.div>
           ))}

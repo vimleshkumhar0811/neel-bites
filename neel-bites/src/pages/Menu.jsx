@@ -15,11 +15,8 @@ const Menu = () => {
 
     const categories = [
         { id: 'all', name: 'All' },
-        { id: 'north-indian', name: 'North Indian' },
-        { id: 'south-indian', name: 'South Indian' },
-        { id: 'street-food', name: 'Street Food' },
-        { id: 'desserts', name: 'Desserts' },
-        { id: 'beverages', name: 'Beverages' },
+        { id: 'instant-mixes', name: 'Instant Mixes' },
+        { id: 'ready-snacks', name: 'Ready Snacks' },
     ];
 
     // Auto-select category from URL on mount / when URL changes
@@ -32,105 +29,139 @@ const Menu = () => {
 
     const menuItems = [
         {
-            id: 'north-1',
-            category: 'north-indian',
-            icon: '🍛',
-            title: 'Butter Chicken Mix',
-            shortDesc: 'Creamy & rich – restaurant style in minutes',
+            id: 'guj-1',
+            category: 'instant-mixes',
+            icon: '🟡',
+            title: 'Khaman Dhokla Instant Mix',
+            shortDesc: 'Fluffy, tangy Gujarati steamed cake – ready in minutes',
             price: '₹149',
-            bgColor: 'from-amber-50 to-red-50',
+            bgColor: 'from-yellow-50 to-amber-50',
             details: [
-                'Serves 2–3 people',
-                'No artificial colors or preservatives',
-                'Ready in 12–15 minutes',
-                'Gluten-free',
-                'Rich tomato & cream base with authentic Punjabi spices',
-                'Just heat and serve with rice or naan',
+                'Makes 20–25 pieces (serves 4–5)',
+                '100% pure vegetarian, no onion/garlic',
+                'Just add water, steam 15–18 min',
+                'No preservatives or artificial colors',
+                'Includes perfect tadka spice sachet',
+                'Soft, spongy texture with authentic Gujarati taste',
             ],
         },
         {
-            id: 'north-2',
-            category: 'north-indian',
-            icon: '🧀',
-            title: 'Paneer Tikka Ready-to-Cook',
-            shortDesc: 'Marinated paneer – grill or air-fry',
-            price: '₹179',
-            bgColor: 'from-orange-50 to-rose-50',
-            details: [
-                'High protein snack or main course',
-                'Spicy & smoky tikka marinade included',
-                'No preservatives',
-                '10–12 minutes cooking time',
-                'Perfect for tawa, grill or air fryer',
-                'Soft paneer cubes with classic spices',
-            ],
-        },
-        {
-            id: 'south-1',
-            category: 'south-indian',
-            icon: '🥘',
-            title: 'Idli Sambar Mix',
-            shortDesc: 'Soft idlis with flavorful sambar',
-            price: '₹129',
+            id: 'guj-2',
+            category: 'instant-mixes',
+            icon: '🥮',
+            title: 'Handvo Instant Mix',
+            shortDesc: 'Savory veggie-loaded Gujarati lentil cake',
+            price: '₹169',
             bgColor: 'from-green-50 to-emerald-50',
             details: [
-                'Traditional South Indian breakfast',
-                'Fermented batter base for soft idlis',
-                'Tangy & aromatic sambar with lentils',
-                'Ready in 10 minutes',
-                'Vegetarian & nutritious',
-                'Serve with chutney or podi',
+                'Protein-rich with rice, lentils & veggies',
+                'Pure vegetarian, no eggs',
+                'Bake or steam – ready in 25–30 min',
+                'Crunchy top with sesame & spices',
+                'Makes one large handvo (serves 6–8)',
+                'Traditional Gujarat breakfast/snack',
             ],
         },
         {
-            id: 'street-1',
-            category: 'street-food',
-            icon: '🌮',
-            title: 'Pav Bhaji Instant Mix',
-            shortDesc: 'Mumbai street-style bhaji',
+            id: 'guj-3',
+            category: 'instant-mixes',
+            icon: '🌿',
+            title: 'Methi Thepla Instant Mix',
+            shortDesc: 'Healthy fenugreek flatbread mix – no rolling needed',
             price: '₹139',
-            bgColor: 'from-red-50 to-rose-50',
+            bgColor: 'from-lime-50 to-green-50',
             details: [
-                'Iconic Mumbai street food experience',
-                'Spicy mashed vegetable bhaji',
-                'Buttery flavor included',
-                'Ready in 10 minutes',
-                'Very filling & satisfying',
-                'Serve with buttered pav & lemon',
+                'Makes 10–12 soft theplas',
+                'Whole wheat + fresh methi flavor',
+                '100% vegetarian & nutritious',
+                'Just add water/yogurt, roll & cook 2 min each',
+                'Perfect travel/snack food',
+                'Stays soft for hours',
             ],
         },
         {
-            id: 'dessert-1',
-            category: 'desserts',
-            icon: '🍮',
-            title: 'Gulab Jamun Mix',
-            shortDesc: 'Soft, syrupy gulab jamuns',
-            price: '₹169',
-            bgColor: 'from-pink-50 to-rose-50',
+            id: 'guj-4',
+            category: 'instant-mixes',
+            icon: '🥟',
+            title: 'Methi Gota Instant Mix',
+            shortDesc: 'Crispy fenugreek fritters – Gujarati favorite',
+            price: '₹129',
+            bgColor: 'from-orange-50 to-amber-50',
             details: [
-                'Classic Indian sweet delicacy',
-                'No frying needed – easy preparation',
-                'Makes 12 soft gulab jamuns',
-                'Aromatic rose & cardamom syrup',
-                'Traditional taste preserved',
-                'Perfect dessert or festive treat',
+                'Makes 20–25 gotas',
+                'Besan-based, deep or air-fry',
+                'Pure veg, spicy & aromatic',
+                'Ready in 10–12 min frying',
+                'Serve with chutney or tea',
+                'Authentic street-style taste',
             ],
         },
         {
-            id: 'beverage-1',
-            category: 'beverages',
-            icon: '🥤',
-            title: 'Masala Chai Instant',
-            shortDesc: 'Aromatic spiced Indian tea',
+            id: 'guj-5',
+            category: 'ready-snacks',
+            icon: '🥨',
+            title: 'Masala Khakhra',
+            shortDesc: 'Thin, crispy Gujarati wheat crackers',
             price: '₹99',
             bgColor: 'from-amber-50 to-yellow-50',
             details: [
-                'Authentic Indian masala chai',
-                'Real ginger, cardamom & cloves',
-                'Energizing & comforting',
-                'Serves 4 cups',
-                'Just add milk & sugar',
-                'Perfect for any time of day',
+                'Pack of 20–25 pieces',
+                'Whole wheat, low oil',
+                '100% vegetarian & preservative-free',
+                'Ready-to-eat with tea/coffee',
+                'Long shelf life, perfect travel snack',
+                'Classic plain masala flavor',
+            ],
+        },
+        {
+            id: 'guj-6',
+            category: 'ready-snacks',
+            icon: '🔶',
+            title: 'Fafda Crispy Strips',
+            shortDesc: 'Golden gram-flour crunchy snack',
+            price: '₹119',
+            bgColor: 'from-yellow-50 to-orange-50',
+            details: [
+                '200g pack – serves 4–5',
+                'Traditional Gujarati breakfast companion',
+                'Pure vegetarian, no maida',
+                'Ready-to-eat, pairs with jalebi or chutney',
+                'Light & crispy texture',
+                'No artificial flavors',
+            ],
+        },
+        {
+            id: 'guj-7',
+            category: 'ready-snacks',
+            icon: '🧶',
+            title: 'Ratlam Sev / Nylon Sev',
+            shortDesc: 'Fine, spicy gram-flour threads',
+            price: '₹89',
+            bgColor: 'from-rose-50 to-red-50',
+            details: [
+                '150g pack',
+                'Classic topping for chaat & snacks',
+                '100% veg, medium spice',
+                'Ready-to-eat, long-lasting crunch',
+                'Authentic Gujarati namkeen',
+                'No preservatives',
+            ],
+        },
+        {
+            id: 'guj-8',
+            category: 'instant-mixes',
+            icon: '🍲',
+            title: 'Gujarati Masala Khichdi Mix',
+            shortDesc: 'Comforting one-pot rice & dal – healthy & quick',
+            price: '₹159',
+            bgColor: 'from-emerald-50 to-teal-50',
+            details: [
+                'Serves 3–4 people',
+                'With moong dal, rice & mild spices',
+                'Pure vegetarian comfort food',
+                'Just add water/veggies, cook 15 min',
+                'Nutritious & light on stomach',
+                'Perfect for travel or busy days',
             ],
         },
     ];
@@ -150,7 +181,7 @@ const Menu = () => {
                     transition={{ duration: 0.8 }}
                     className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-5"
                 >
-                    Our Instant Menu
+                    Gujarati Instant Menu
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -158,7 +189,7 @@ const Menu = () => {
                     transition={{ delay: 0.4 }}
                     className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
                 >
-                    Authentic Indian flavors — ready in minutes. Choose your craving and bring home the taste of India.
+                    Pure vegetarian Gujarati flavors — instant mixes & ready snacks. Taste the authentic joy of Gujarat at home.
                 </motion.p>
             </div>
 
@@ -173,15 +204,15 @@ const Menu = () => {
                                 whileTap={{ scale: 0.96 }}
                                 onClick={() => setActiveCategory(cat.id)}
                                 className={`
-            flex-shrink-0 px-6 py-2.5 sm:px-7 sm:py-3 
-            rounded-full font-medium text-sm sm:text-base
-            transition-all duration-300 snap-center cursor-pointer
-            shadow-sm
-            ${activeCategory === cat.id
+                                    flex-shrink-0 px-6 py-2.5 sm:px-7 sm:py-3 
+                                    rounded-full font-medium text-sm sm:text-base
+                                    transition-all duration-300 snap-center cursor-pointer
+                                    shadow-sm
+                                    ${activeCategory === cat.id
                                         ? 'bg-emerald-600 text-white shadow-md ring-1 ring-emerald-700/40'
                                         : 'bg-white/80 backdrop-blur-sm text-gray-700 border border-gray-200/70 hover:bg-white hover:shadow hover:border-gray-300'
                                     }
-          `}
+                                `}
                             >
                                 {cat.name}
                             </motion.button>
@@ -278,7 +309,7 @@ const Menu = () => {
                 className="text-center mt-20 px-5"
             >
                 <p className="text-xl text-gray-700 mb-6">
-                    Want something custom or have a special request?
+                    Craving more Gujarati specials or custom orders?
                 </p>
                 <a
                     href="/contact"

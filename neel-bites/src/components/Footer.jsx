@@ -58,38 +58,36 @@ const Footer = () => {
           </motion.div>
 
           {/* Menu - with query param navigation */}
-          <motion.div variants={item}>
-            <h4 className="text-lg font-semibold text-white mb-5">Menu</h4>
-            <ul className="space-y-3 text-sm">
-              {[
-                { label: 'North Indian', category: 'north-indian' },
-                { label: 'South Indian', category: 'south-indian' },
-                { label: 'Street Food', category: 'street-food' },
-                { label: 'Desserts', category: 'desserts' },
-                { label: 'Beverages', category: 'beverages' },
-              ].map((item) => (
-                <li key={item.label}>
-                  <Link
-                    to={`/menu?category=${item.category}`}
-                    className="hover:text-green-400 transition-colors duration-200 flex items-center gap-2"
-                  >
-                    <span className="text-green-600">›</span>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        <motion.div variants={item}>
+  <h4 className="text-lg font-semibold text-white mb-5">Menu</h4>
+  <ul className="space-y-3 text-sm">
+    {[
+      { label: 'All Gujarati Items', category: 'all' },
+      { label: 'Instant Mixes',      category: 'instant-mixes' },
+      { label: 'Ready Snacks',       category: 'ready-snacks' },
+    ].map((item) => (
+      <li key={item.label}>
+        <Link
+          to={`/menu?category=${item.category}`}
+          className="hover:text-green-400 transition-colors duration-200 flex items-center gap-2"
+        >
+          <span className="text-green-600">›</span>
+          {item.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</motion.div>
 
           {/* Company */}
           <motion.div variants={item}>
             <h4 className="text-lg font-semibold text-white mb-5">Company</h4>
             <ul className="space-y-3 text-sm">
               {[
-                { label: 'About Us', to: '/about' },
+                { label: 'Home', to: '/' },
+                { label: 'Menu', to: '/menu' },
+                { label: 'About', to: '/about' },
                 { label: 'Products', to: '/products' },
-                { label: 'Careers', href: '#' },
-                { label: 'Blog', href: '#' },
                 { label: 'Contact', to: '/contact' },
               ].map((item) => (
                 <li key={item.label}>
@@ -122,8 +120,8 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <span className="text-green-500 text-xl">📍</span>
                 <div>
-                  <p className="font-medium text-white">Ahmedabad, Gujarat</p>
-                  <p className="text-gray-400">India</p>
+                  <p className="font-medium text-white">Kalnu iela 5, Salaspils, Salaspils novads, Latvia</p>
+           
                 </div>
               </li>
               <li className="flex items-center gap-3">
@@ -133,15 +131,6 @@ const Footer = () => {
                   className="hover:text-green-400 transition-colors"
                 >
                   info@neelbites.com
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-green-500 text-xl">📞</span>
-                <a
-                  href="tel:+911234567890"
-                  className="hover:text-green-400 transition-colors"
-                >
-                  +91 1234 567 890
                 </a>
               </li>
             </ul>

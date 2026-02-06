@@ -233,6 +233,83 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Company Details / Get in Touch Footer */}
+      <section className="bg-gray-300 text-white py-16 md:py-20">
+        <div className="container mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+              Get in Touch
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+              {/* Left - Text */}
+              <div>
+                <p className="text-black text-lg md:text-xl leading-relaxed mb-8 opacity-90">
+                  Have questions about our products or want to bring Neel Bites to your region? We'd love to hear from you.
+                </p>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-emerald-700/20 p-3 rounded-lg">
+                      <span className="text-2xl">📍</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-emerald-400 mb-1">Registered Office</h4>
+                      <p className="text-black">
+                        Kalnu iela 5,<br />
+                        Salaspils, Salaspils nov.,<br />
+                        Latvia LV-2121
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="bg-emerald-700/20 p-3 rounded-lg">
+                      <span className="text-2xl">✉️</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-emerald-400 mb-1">Email Us</h4>
+                      <a 
+                        href="mailto:info@neelbites.com" 
+                        className="text-black hover:text-emerald-300 transition-colors"
+                      >
+                        info@neelbites.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right - Company Details Card */}
+              <div className="bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-700">
+                <h3 className="text-2xl font-bold text-emerald-400 mb-6">
+                  Company Details
+                </h3>
+
+                <div className="space-y-4 text-gray-300">
+                  <div className="flex justify-between">
+                    <span className="font-medium">Company Name</span>
+                    <span className="text-right">SIA NEAL BITES</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Registration Number</span>
+                    <span className="text-right">40203713843</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">SEPA Payment ID</span>
+                    <span className="text-right">LV33ZZZ40203713843</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Date Registered</span>
+                    <span className="text-right">22.01.2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
