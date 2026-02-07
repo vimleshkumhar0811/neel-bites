@@ -31,7 +31,7 @@ const Menu = () => {
         {
             id: 'guj-1',
             category: 'instant-mixes',
-            icon: '🟡',
+            icon: 'https://as2.ftcdn.net/v2/jpg/10/41/99/53/1000_F_1041995329_Y948A29Hru2TXn8JgkWMwJmIVauyQ9jq.jpg',
             title: 'Khaman Dhokla Instant Mix',
             shortDesc: 'Fluffy, tangy Gujarati steamed cake – ready in minutes',
             price: '₹149',
@@ -48,7 +48,7 @@ const Menu = () => {
         {
             id: 'guj-2',
             category: 'instant-mixes',
-            icon: '🥮',
+            icon: 'https://as1.ftcdn.net/v2/jpg/08/30/55/66/1000_F_830556697_uKefpW2yW7qTlA2RPoRtCMuGDeYwI0Ok.jpg',
             title: 'Handvo Instant Mix',
             shortDesc: 'Savory veggie-loaded Gujarati lentil cake',
             price: '₹169',
@@ -65,7 +65,7 @@ const Menu = () => {
         {
             id: 'guj-3',
             category: 'instant-mixes',
-            icon: '🌿',
+            icon: 'https://as1.ftcdn.net/v2/jpg/10/38/88/76/1000_F_1038887639_uPSdXsUjdMhQmeIje8vbSjZ7i1MKGEDS.jpg',
             title: 'Methi Thepla Instant Mix',
             shortDesc: 'Healthy fenugreek flatbread mix – no rolling needed',
             price: '₹139',
@@ -82,7 +82,7 @@ const Menu = () => {
         {
             id: 'guj-4',
             category: 'instant-mixes',
-            icon: '🥟',
+            icon: 'https://as1.ftcdn.net/v2/jpg/10/38/88/76/1000_F_1038887639_uPSdXsUjdMhQmeIje8vbSjZ7i1MKGEDS.jpg',
             title: 'Methi Gota Instant Mix',
             shortDesc: 'Crispy fenugreek fritters – Gujarati favorite',
             price: '₹129',
@@ -99,7 +99,7 @@ const Menu = () => {
         {
             id: 'guj-5',
             category: 'ready-snacks',
-            icon: '🥨',
+            icon: 'https://as1.ftcdn.net/v2/jpg/01/07/29/84/1000_F_107298444_RKNGIYmUF2GZxUgMOcyUZpkWTJoo4dWM.jpg',
             title: 'Masala Khakhra',
             shortDesc: 'Thin, crispy Gujarati wheat crackers',
             price: '₹99',
@@ -116,7 +116,7 @@ const Menu = () => {
         {
             id: 'guj-6',
             category: 'ready-snacks',
-            icon: '🔶',
+            icon: 'https://as1.ftcdn.net/v2/jpg/06/80/00/94/1000_F_680009434_vPprSdIGmjXCMaWfBUZUOrFFapNGfnNU.jpg',
             title: 'Fafda Crispy Strips',
             shortDesc: 'Golden gram-flour crunchy snack',
             price: '₹119',
@@ -131,26 +131,9 @@ const Menu = () => {
             ],
         },
         {
-            id: 'guj-7',
-            category: 'ready-snacks',
-            icon: '🧶',
-            title: 'Ratlam Sev / Nylon Sev',
-            shortDesc: 'Fine, spicy gram-flour threads',
-            price: '₹89',
-            bgColor: 'from-rose-50 to-red-50',
-            details: [
-                '150g pack',
-                'Classic topping for chaat & snacks',
-                '100% veg, medium spice',
-                'Ready-to-eat, long-lasting crunch',
-                'Authentic Gujarati namkeen',
-                'No preservatives',
-            ],
-        },
-        {
             id: 'guj-8',
             category: 'instant-mixes',
-            icon: '🍲',
+            icon: 'https://as1.ftcdn.net/v2/jpg/04/19/33/38/1000_F_419333826_QXh2eXt3aiKLcISa6gBEt0ToFjfyFIAV.jpg',
             title: 'Gujarati Masala Khichdi Mix',
             shortDesc: 'Comforting one-pot rice & dal – healthy & quick',
             price: '₹159',
@@ -244,12 +227,21 @@ const Menu = () => {
                                         {/* Front */}
                                         <div className="absolute inset-0 [backface-visibility:hidden] rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-white/95 via-gray-50/80 to-white/70 border border-gray-200/60 p-6 flex flex-col justify-between hover:shadow-2xl transition-all duration-300">
                                             <div className="flex items-start justify-between mb-5">
-                                                <div className="w-16 h-16 flex items-center justify-center text-5xl drop-shadow-lg bg-gradient-to-br from-emerald-100/80 to-emerald-50/50 rounded-2xl">
-                                                    {item.icon}
+                                                <div className="w-200 h-50 flex items-center justify-center text-5xl drop-shadow-lg bg-gradient-to-br from-emerald-100/80 to-emerald-50/50 rounded-2xl">
+                                                    {/* {item.icon} */}
+                                                    <img
+                                                        src={item.icon}
+                                                        alt={item.title}
+                                                        className="w-198 h-48 object-cover rounded-lg"
+                                                        onError={(e) => {
+                                                            e.currentTarget.src =
+                                                                'https://via.placeholder.com/100?text=Image';
+                                                        }}
+                                                    />
                                                 </div>
-                                                <span className="bg-emerald-100 text-emerald-800 px-4 py-1.5 rounded-full text-base font-semibold shadow-sm">
+                                                {/* <span className="bg-emerald-100 text-emerald-800 px-4 py-1.5 rounded-full text-base font-semibold shadow-sm">
                                                     {item.price}
-                                                </span>
+                                                </span> */}
                                             </div>
 
                                             <div className="flex-grow">
