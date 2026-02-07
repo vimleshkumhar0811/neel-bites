@@ -12,7 +12,16 @@ const ProductCard = ({ icon, title, description, features, buttonText = 'Explore
       className="bg-white/50 backdrop-blur-md rounded-xl p-6 shadow-lg max-w-4xl mx-auto mb-8"
     >
       <div className="flex items-center mb-4">
-        {icon}
+        {/* {icon} */}
+        <img
+          src={icon}
+          alt={title}
+          className="w-14 h-14 object-cover rounded-lg"
+          onError={(e) => {
+            e.currentTarget.src =
+              'https://via.placeholder.com/100?text=Image';
+          }}
+        />
         <h2 className="text-2xl font-bold text-primary ml-4">{title}</h2>
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
