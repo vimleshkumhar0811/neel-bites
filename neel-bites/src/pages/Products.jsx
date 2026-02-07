@@ -6,7 +6,7 @@ const Products = () => {
   const products = [
     {
       id: 'khaman-dhokla',
-      icon: '🟡',
+      icon: 'https://as2.ftcdn.net/v2/jpg/10/41/99/53/1000_F_1041995329_Y948A29Hru2TXn8JgkWMwJmIVauyQ9jq.jpg',
       type: 'Instant Mix',
       title: 'Khaman Dhokla Mix',
       description: 'Fluffy, tangy, spongy Gujarati steamed cake – restaurant-style in minutes.',
@@ -16,7 +16,7 @@ const Products = () => {
     },
     {
       id: 'handvo',
-      icon: '🥮',
+      icon: 'https://as1.ftcdn.net/v2/jpg/08/30/55/66/1000_F_830556697_uKefpW2yW7qTlA2RPoRtCMuGDeYwI0Ok.jpg',
       type: 'Instant Mix',
       title: 'Handvo Mix',
       description: 'Savory lentil & veggie cake with crunchy sesame topping – bake or steam.',
@@ -26,7 +26,7 @@ const Products = () => {
     },
     {
       id: 'methi-gota',
-      icon: '🌿',
+      icon: 'https://as1.ftcdn.net/v2/jpg/10/38/88/76/1000_F_1038887639_uPSdXsUjdMhQmeIje8vbSjZ7i1MKGEDS.jpg',
       type: 'Instant Mix',
       title: 'Methi Gota Mix',
       description: 'Crispy fenugreek fritters – spicy, aromatic Gujarati street favorite.',
@@ -36,7 +36,7 @@ const Products = () => {
     },
     {
       id: 'masala-khichdi',
-      icon: '🍲',
+      icon: 'https://as1.ftcdn.net/v2/jpg/04/19/33/38/1000_F_419333826_QXh2eXt3aiKLcISa6gBEt0ToFjfyFIAV.jpg',
       type: 'Instant Mix',
       title: 'Gujarati Masala Khichdi',
       description: 'Comforting one-pot rice & moong dal – light, nutritious & quick.',
@@ -46,7 +46,7 @@ const Products = () => {
     },
     {
       id: 'thepla-mix',
-      icon: '🫓',
+      icon: 'https://as2.ftcdn.net/v2/jpg/17/41/66/29/1000_F_1741662956_C4AJIdhNarDHLUaKdYhtqrjt6HJdZYKq.jpg',
       type: 'Instant Mix',
       title: 'Methi Thepla Mix',
       description: 'Healthy fenugreek flatbreads – soft, nutritious, no rolling hassle.',
@@ -56,7 +56,7 @@ const Products = () => {
     },
     {
       id: 'khakhra',
-      icon: '🥨',
+      icon: 'https://as1.ftcdn.net/v2/jpg/01/07/29/84/1000_F_107298444_RKNGIYmUF2GZxUgMOcyUZpkWTJoo4dWM.jpg',
       type: 'Ready Snack',
       title: 'Masala Khakhra',
       description: 'Thin, crispy whole-wheat Gujarati crackers – perfect with tea.',
@@ -66,23 +66,13 @@ const Products = () => {
     },
     {
       id: 'fafda',
-      icon: '🥨',
+      icon: 'https://as1.ftcdn.net/v2/jpg/06/80/00/94/1000_F_680009434_vPprSdIGmjXCMaWfBUZUOrFFapNGfnNU.jpg',
       type: 'Ready Snack',
       title: 'Fafda Strips',
       description: 'Golden, crunchy gram-flour snack – classic companion to jalebi or chutney.',
       price: '₹119',
       bgGradient: 'from-yellow-50 to-orange-50',
       accentColor: 'amber',
-    },
-    {
-      id: 'ratlam-sev',
-      icon: '🔶',
-      type: 'Ready Snack',
-      title: 'Ratlam Nylon Sev',
-      description: 'Fine, spicy gram-flour threads – ideal for chaat & snacking.',
-      price: '₹89',
-      bgGradient: 'from-rose-50 to-red-50',
-      accentColor: 'rose',
     },
     // Feel free to add more (e.g. Dalwada mix, Khandvi mix, Undhiyu mix if seasonal)
   ];
@@ -129,12 +119,21 @@ const Products = () => {
             >
               <div className="p-6 md:p-8 flex flex-col h-full">
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-16 h-16 flex items-center justify-center text-5xl drop-shadow-md bg-white/60 rounded-2xl">
-                    {product.icon}
+                  <div className="w-200 h-60 flex items-center justify-center text-5xl drop-shadow-md bg-white/60 rounded-2xl">
+                    {/* {product.icon} */}
+                    <img
+                      src={product.icon}
+                      alt={product.title}
+                      className="w-198 h-58 object-cover rounded-lg"
+                      onError={(e) => {
+                        e.currentTarget.src =
+                          'https://via.placeholder.com/100?text=Image';
+                      }}
+                    />
                   </div>
-                  <span className={`bg-white/80 text-${product.accentColor}-700 px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm`}>
+                  {/* <span className={`bg-white/80 text-${product.accentColor}-700 px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm`}>
                     {product.price}
-                  </span>
+                  </span> */}
                 </div>
 
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-emerald-700 transition-colors">
