@@ -270,8 +270,8 @@ const Home = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-emerald-400 mb-1">Email Us</h4>
-                      <a 
-                        href="mailto:info@neelbites.com" 
+                      <a
+                        href="mailto:info@neelbites.com"
                         className="text-black hover:text-emerald-300 transition-colors"
                       >
                         info@neelbites.com
@@ -296,10 +296,10 @@ const Home = () => {
                     <span className="font-medium">Registration Number</span>
                     <span className="text-right">40203713843</span>
                   </div>
-                  <div className="flex justify-between">
+                  {/* <div className="flex justify-between">
                     <span className="font-medium">SEPA Payment ID</span>
                     <span className="text-right">LV33ZZZ40203713843</span>
-                  </div>
+                  </div> */}
                   <div className="flex justify-between">
                     <span className="font-medium">Date Registered</span>
                     <span className="text-right">22.01.2026</span>
